@@ -17,7 +17,7 @@ const server = ()=>{
                 notes.push(newNote);
                 dbUpdate();
                 console.log(`New note added: ${newNote.title}`);
-            });
+            }); 
 
             server.get("/api/notes/:id",(req,res)=>{
                 res.json(notes[req.params.id]);
